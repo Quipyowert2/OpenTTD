@@ -535,7 +535,7 @@ public:
 	 * Construct the iterator.
 	 * @param st Station the airport is part of.
 	 */
-	AirportTileIterator(const Station *st) : OrthogonalTileIterator(st->airport), st(st)
+	explicit AirportTileIterator(const Station *st) : OrthogonalTileIterator(st->airport), st(st)
 	{
 		if (!st->TileBelongsToAirport(this->tile)) ++(*this);
 	}

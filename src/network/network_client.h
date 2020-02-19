@@ -73,7 +73,7 @@ protected:
 	static NetworkRecvStatus SendMapOk();
 	void CheckConnection();
 public:
-	ClientNetworkGameSocketHandler(SOCKET s);
+	explicit ClientNetworkGameSocketHandler(SOCKET s);
 	~ClientNetworkGameSocketHandler();
 
 	NetworkRecvStatus CloseConnection(NetworkRecvStatus status) override;

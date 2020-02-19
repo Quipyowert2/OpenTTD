@@ -71,7 +71,7 @@ protected:
 	static void ErrorPrintFunc(HSQUIRRELVM vm, const SQChar *s, ...);
 
 public:
-	Squirrel(const char *APIName);
+	explicit Squirrel(const char *APIName);
 	~Squirrel();
 
 	/**
@@ -289,7 +289,7 @@ class ScriptAllocatorScope {
 	ScriptAllocator *old_allocator;
 
 public:
-	ScriptAllocatorScope(const Squirrel *engine)
+	explicit ScriptAllocatorScope(const Squirrel *engine)
 	{
 		this->old_allocator = _squirrel_allocator;
 		/* This may get called with a nullptr engine, in case of a crashed script */

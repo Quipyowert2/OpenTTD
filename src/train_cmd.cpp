@@ -2431,7 +2431,7 @@ private:
 	bool           suppress_implicit_orders;
 
 public:
-	VehicleOrderSaver(Train *_v) :
+	explicit VehicleOrderSaver(Train *_v) :
 		v(_v),
 		old_order(_v->current_order),
 		old_dest_tile(_v->dest_tile),

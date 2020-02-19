@@ -85,7 +85,7 @@ public:
 	/**
 	 * @param subsidy_id The index of this subsidy in the _subsidies array.
 	 */
-	ScriptEventSubsidyOffer(SubsidyID subsidy_id) :
+	explicit ScriptEventSubsidyOffer(SubsidyID subsidy_id) :
 		ScriptEvent(ET_SUBSIDY_OFFER),
 		subsidy_id(subsidy_id)
 	{}
@@ -116,7 +116,7 @@ public:
 	/**
 	 * @param subsidy_id The index of this subsidy in the _subsidies array.
 	 */
-	ScriptEventSubsidyOfferExpired(SubsidyID subsidy_id) :
+	explicit ScriptEventSubsidyOfferExpired(SubsidyID subsidy_id) :
 		ScriptEvent(ET_SUBSIDY_OFFER_EXPIRED),
 		subsidy_id(subsidy_id)
 	{}
@@ -147,7 +147,7 @@ public:
 	/**
 	 * @param subsidy_id The index of this subsidy in the _subsidies array.
 	 */
-	ScriptEventSubsidyAwarded(SubsidyID subsidy_id) :
+	explicit ScriptEventSubsidyAwarded(SubsidyID subsidy_id) :
 		ScriptEvent(ET_SUBSIDY_AWARDED),
 		subsidy_id(subsidy_id)
 	{}
@@ -178,7 +178,7 @@ public:
 	/**
 	 * @param subsidy_id The index of this subsidy in the _subsidies array.
 	 */
-	ScriptEventSubsidyExpired(SubsidyID subsidy_id) :
+	explicit ScriptEventSubsidyExpired(SubsidyID subsidy_id) :
 		ScriptEvent(ET_SUBSIDY_EXPIRED),
 		subsidy_id(subsidy_id)
 	{}
@@ -211,7 +211,7 @@ public:
 	/**
 	 * @param engine The engine offered to test.
 	 */
-	ScriptEventEnginePreview(EngineID engine) :
+	explicit ScriptEventEnginePreview(EngineID engine) :
 		ScriptEvent(ET_ENGINE_PREVIEW),
 		engine(engine)
 	{}
@@ -300,7 +300,7 @@ public:
 	/**
 	 * @param owner The new company.
 	 */
-	ScriptEventCompanyNew(Owner owner) :
+	explicit ScriptEventCompanyNew(Owner owner) :
 		ScriptEvent(ET_COMPANY_NEW),
 		owner((ScriptCompany::CompanyID)owner)
 	{}
@@ -332,7 +332,7 @@ public:
 	/**
 	 * @param owner The company that is in trouble.
 	 */
-	ScriptEventCompanyInTrouble(Owner owner) :
+	explicit ScriptEventCompanyInTrouble(Owner owner) :
 		ScriptEvent(ET_COMPANY_IN_TROUBLE),
 		owner((ScriptCompany::CompanyID)owner)
 	{}
@@ -454,7 +454,7 @@ public:
 	/**
 	 * @param owner The company that has gone bankrupt.
 	 */
-	ScriptEventCompanyBankrupt(Owner owner) :
+	explicit ScriptEventCompanyBankrupt(Owner owner) :
 		ScriptEvent(ET_COMPANY_BANKRUPT),
 		owner((ScriptCompany::CompanyID)owner)
 	{}
@@ -485,7 +485,7 @@ public:
 	/**
 	 * @param vehicle_id The vehicle that is lost.
 	 */
-	ScriptEventVehicleLost(VehicleID vehicle_id) :
+	explicit ScriptEventVehicleLost(VehicleID vehicle_id) :
 		ScriptEvent(ET_VEHICLE_LOST),
 		vehicle_id(vehicle_id)
 	{}
@@ -516,7 +516,7 @@ public:
 	/**
 	 * @param vehicle_id The vehicle that is waiting in a depot.
 	 */
-	ScriptEventVehicleWaitingInDepot(VehicleID vehicle_id) :
+	explicit ScriptEventVehicleWaitingInDepot(VehicleID vehicle_id) :
 		ScriptEvent(ET_VEHICLE_WAITING_IN_DEPOT),
 		vehicle_id(vehicle_id)
 	{}
@@ -547,7 +547,7 @@ public:
 	/**
 	 * @param vehicle_id The vehicle that was unprofitable.
 	 */
-	ScriptEventVehicleUnprofitable(VehicleID vehicle_id) :
+	explicit ScriptEventVehicleUnprofitable(VehicleID vehicle_id) :
 		ScriptEvent(ET_VEHICLE_UNPROFITABLE),
 		vehicle_id(vehicle_id)
 	{}
@@ -578,7 +578,7 @@ public:
 	/**
 	 * @param industry_id The new industry.
 	 */
-	ScriptEventIndustryOpen(IndustryID industry_id) :
+	explicit ScriptEventIndustryOpen(IndustryID industry_id) :
 		ScriptEvent(ET_INDUSTRY_OPEN),
 		industry_id(industry_id)
 	{}
@@ -609,7 +609,7 @@ public:
 	/**
 	 * @param industry_id The new industry.
 	 */
-	ScriptEventIndustryClose(IndustryID industry_id) :
+	explicit ScriptEventIndustryClose(IndustryID industry_id) :
 		ScriptEvent(ET_INDUSTRY_CLOSE),
 		industry_id(industry_id)
 	{}
@@ -640,7 +640,7 @@ public:
 	/**
 	 * @param engine The engine that is available.
 	 */
-	ScriptEventEngineAvailable(EngineID engine) :
+	explicit ScriptEventEngineAvailable(EngineID engine) :
 		ScriptEvent(ET_ENGINE_AVAILABLE),
 		engine(engine)
 	{}
@@ -711,7 +711,7 @@ public:
 	/**
 	 * @param station The station containing the affected airport
 	 */
-	ScriptEventDisasterZeppelinerCrashed(StationID station) :
+	explicit ScriptEventDisasterZeppelinerCrashed(StationID station) :
 		ScriptEvent(ET_DISASTER_ZEPPELINER_CRASHED),
 		station(station)
 	{}
@@ -742,7 +742,7 @@ public:
 	/**
 	 * @param station The station containing the affected airport
 	 */
-	ScriptEventDisasterZeppelinerCleared(StationID station) :
+	explicit ScriptEventDisasterZeppelinerCleared(StationID station) :
 		ScriptEvent(ET_DISASTER_ZEPPELINER_CLEARED),
 		station(station)
 	{}
@@ -773,7 +773,7 @@ public:
 	/**
 	 * @param town The town that was created.
 	 */
-	ScriptEventTownFounded(TownID town) :
+	explicit ScriptEventTownFounded(TownID town) :
 		ScriptEvent(ET_TOWN_FOUNDED),
 		town(town)
 	{}
@@ -806,7 +806,7 @@ public:
 	/**
 	 * @param vehicle_id The aircraft whose destination is too far away.
 	 */
-	ScriptEventAircraftDestTooFar(VehicleID vehicle_id) :
+	explicit ScriptEventAircraftDestTooFar(VehicleID vehicle_id) :
 		ScriptEvent(ET_AIRCRAFT_DEST_TOO_FAR),
 		vehicle_id(vehicle_id)
 	{}
@@ -837,7 +837,7 @@ public:
 	/**
 	 * @param json The JSON string which got sent.
 	 */
-	ScriptEventAdminPort(const char *json);
+	explicit ScriptEventAdminPort(const char *json);
 	~ScriptEventAdminPort();
 
 	/**

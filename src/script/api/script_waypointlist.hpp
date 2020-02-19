@@ -23,7 +23,7 @@ public:
 	/**
 	 * @param waypoint_type The type of waypoint to make a list of waypoints for.
 	 */
-	ScriptWaypointList(ScriptWaypoint::WaypointType waypoint_type);
+	explicit ScriptWaypointList(ScriptWaypoint::WaypointType waypoint_type);
 };
 
 /**
@@ -36,7 +36,7 @@ public:
 	/**
 	 * @param vehicle_id The vehicle to get the list of waypoints he has in its orders from.
 	 */
-	ScriptWaypointList_Vehicle(VehicleID vehicle_id);
+	explicit ScriptWaypointList_Vehicle(VehicleID vehicle_id);
 };
 
 #endif /* SCRIPT_WAYPOINTLIST_HPP */

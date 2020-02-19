@@ -145,7 +145,7 @@ struct GRFFile : ZeroedMemoryAllocator {
 	uint32 grf_features;                     ///< Bitset of GrfSpecFeature the grf uses
 	PriceMultipliers price_base_multipliers; ///< Price base multipliers as set by the grf.
 
-	GRFFile(const struct GRFConfig *config);
+	explicit GRFFile(const struct GRFConfig *config);
 	~GRFFile();
 
 	/** Get GRF Parameter with range checking */

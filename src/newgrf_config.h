@@ -99,8 +99,8 @@ struct GRFIdentifier {
 
 /** Information about why GRF had problems during initialisation */
 struct GRFError : ZeroedMemoryAllocator {
-	GRFError(StringID severity, StringID message = 0);
-	GRFError(const GRFError &error);
+	explicit GRFError(StringID severity, StringID message = 0);
+	explicit GRFError(const GRFError &error);
 	~GRFError();
 
 	char *custom_message;  ///< Custom message (if present)
@@ -119,8 +119,8 @@ enum GRFParameterType {
 
 /** Information about one grf parameter. */
 struct GRFParameterInfo {
-	GRFParameterInfo(uint nr);
-	GRFParameterInfo(GRFParameterInfo &info);
+	explicit GRFParameterInfo(uint nr);
+	explicit GRFParameterInfo(GRFParameterInfo &info);
 	~GRFParameterInfo();
 	struct GRFText *name;  ///< The name of this parameter
 	struct GRFText *desc;  ///< The description of this parameter

@@ -1008,8 +1008,8 @@ private:
 
 	CargoDataEntry(StationID st, uint c, CargoDataEntry *p);
 	CargoDataEntry(CargoID car, uint c, CargoDataEntry *p);
-	CargoDataEntry(StationID st);
-	CargoDataEntry(CargoID car);
+	explicit CargoDataEntry(StationID st);
+	explicit CargoDataEntry(CargoID car);
 
 	CargoDataEntry *Retrieve(CargoDataSet::iterator i) const;
 

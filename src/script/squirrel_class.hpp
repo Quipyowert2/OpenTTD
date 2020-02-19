@@ -22,7 +22,7 @@ private:
 	const char *classname;
 
 public:
-	DefSQClass(const char *_classname) :
+	explicit DefSQClass(const char *_classname) :
 		classname(_classname)
 	{}
 

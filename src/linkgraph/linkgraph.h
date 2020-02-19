@@ -294,7 +294,7 @@ public:
 		 * Constructor
 		 * @param edge Edge to be wrapped.
 		 */
-		Edge(BaseEdge &edge) : EdgeWrapper<BaseEdge>(edge) {}
+		explicit Edge(BaseEdge &edge) : EdgeWrapper<BaseEdge>(edge) {}
 		void Update(uint capacity, uint usage, EdgeUpdateMode mode);
 		void Restrict() { this->edge.last_unrestricted_update = INVALID_DATE; }
 		void Release() { this->edge.last_restricted_update = INVALID_DATE; }
@@ -461,7 +461,7 @@ public:
 	 * Real constructor.
 	 * @param cargo Cargo the link graph is about.
 	 */
-	LinkGraph(CargoID cargo) : cargo(cargo), last_compression(_date) {}
+	explicit LinkGraph(CargoID cargo) : cargo(cargo), last_compression(_date) {}
 
 	void Init(uint size);
 	void ShiftDates(int interval);

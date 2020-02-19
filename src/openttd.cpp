@@ -402,7 +402,7 @@ struct AfterNewGRFScan : NewGRFScanCallback {
 	 * @param save_config_ptr Pointer to the save_config local variable which
 	 *                        decides whether to save of exit or not.
 	 */
-	AfterNewGRFScan(bool *save_config_ptr) :
+	explicit AfterNewGRFScan(bool *save_config_ptr) :
 			startyear(INVALID_YEAR), generation_seed(GENERATE_NEW_SEED),
 			dedicated_host(nullptr), dedicated_port(0), network_conn(nullptr),
 			join_server_password(nullptr), join_company_password(nullptr),

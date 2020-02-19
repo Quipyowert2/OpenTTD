@@ -75,7 +75,7 @@ protected:
 	NetworkAddress address;
 
 public:
-	TCPConnecter(const NetworkAddress &address);
+	explicit TCPConnecter(const NetworkAddress &address);
 	/** Silence the warnings */
 	virtual ~TCPConnecter() {}
 

@@ -30,7 +30,7 @@ public:
 	 * Create the window with the given description.
 	 * @param desc  The description of the window.
 	 */
-	BaseNetworkContentDownloadStatusWindow(WindowDesc *desc);
+	explicit BaseNetworkContentDownloadStatusWindow(WindowDesc *desc);
 
 	/**
 	 * Free everything associated with this window.

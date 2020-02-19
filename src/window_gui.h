@@ -282,7 +282,7 @@ protected:
 	std::vector<int> scheduled_invalidation_data;  ///< Data of scheduled OnInvalidateData() calls.
 
 public:
-	Window(WindowDesc *desc);
+	explicit Window(WindowDesc *desc);
 
 	virtual ~Window();
 

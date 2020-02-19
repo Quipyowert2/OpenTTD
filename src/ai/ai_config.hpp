@@ -24,7 +24,7 @@ public:
 		ScriptConfig()
 	{}
 
-	AIConfig(const AIConfig *config);
+	explicit AIConfig(const AIConfig *config);
 
 	class AIInfo *GetInfo() const;
 

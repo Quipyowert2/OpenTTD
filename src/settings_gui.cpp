@@ -174,7 +174,7 @@ struct GameOptionsWindow : Window {
 	GameSettings *opt;
 	bool reload;
 
-	GameOptionsWindow(WindowDesc *desc) : Window(desc)
+	explicit GameOptionsWindow(WindowDesc *desc) : Window(desc)
 	{
 		this->opt = &GetGameSettings();
 		this->reload = false;
@@ -770,7 +770,7 @@ struct SettingEntry : BaseSettingEntry {
 	const SettingDesc *setting; ///< Setting description of the setting
 	uint index;                 ///< Index of the setting in the settings table
 
-	SettingEntry(const char *name);
+	explicit SettingEntry(const char *name);
 
 	virtual void Init(byte level = 0);
 	virtual uint Length() const;
@@ -829,7 +829,7 @@ struct SettingsPage : BaseSettingEntry, SettingsContainer {
 	StringID title;     ///< Title of the sub-page
 	bool folded;        ///< Sub-page is folded (not visible except for its title)
 
-	SettingsPage(StringID title);
+	explicit SettingsPage(StringID title);
 
 	virtual void Init(byte level = 0);
 	virtual void FoldAll();
@@ -1817,7 +1817,7 @@ struct GameSettingsWindow : Window {
 
 	Scrollbar *vscroll;
 
-	GameSettingsWindow(WindowDesc *desc) : Window(desc), filter_editbox(50)
+	explicit GameSettingsWindow(WindowDesc *desc) : Window(desc), filter_editbox(50)
 	{
 		this->warn_missing = WHR_NONE;
 		this->warn_lines = 0;
@@ -2469,7 +2469,7 @@ void DrawBoolButton(int x, int y, bool state, bool clickable)
 struct CustomCurrencyWindow : Window {
 	int query_widget;
 
-	CustomCurrencyWindow(WindowDesc *desc) : Window(desc)
+	explicit CustomCurrencyWindow(WindowDesc *desc) : Window(desc)
 	{
 		this->InitNested();
 

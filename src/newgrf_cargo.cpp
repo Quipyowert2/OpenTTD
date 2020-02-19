@@ -17,7 +17,7 @@
 struct CargoResolverObject : public ResolverObject {
 	const CargoSpec *cargospec;
 
-	CargoResolverObject(const CargoSpec *cs, CallbackID callback = CBID_NO_CALLBACK, uint32 callback_param1 = 0, uint32 callback_param2 = 0);
+	explicit CargoResolverObject(const CargoSpec *cs, CallbackID callback = CBID_NO_CALLBACK, uint32 callback_param1 = 0, uint32 callback_param2 = 0);
 
 	const SpriteGroup *ResolveReal(const RealSpriteGroup *group) const override;
 

@@ -112,7 +112,7 @@ public:
 		}
 	}
 
-	LandInfoWindow(TileIndex tile) : Window(&_land_info_desc), tile(tile)
+	explicit LandInfoWindow(TileIndex tile) : Window(&_land_info_desc), tile(tile)
 	{
 		this->InitNested();
 

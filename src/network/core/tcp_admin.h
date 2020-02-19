@@ -481,7 +481,7 @@ protected:
 public:
 	NetworkRecvStatus CloseConnection(bool error = true) override;
 
-	NetworkAdminSocketHandler(SOCKET s);
+	explicit NetworkAdminSocketHandler(SOCKET s);
 	~NetworkAdminSocketHandler();
 
 	NetworkRecvStatus ReceivePackets();

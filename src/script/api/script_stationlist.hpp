@@ -23,7 +23,7 @@ public:
 	/**
 	 * @param station_type The type of station to make a list of stations for.
 	 */
-	ScriptStationList(ScriptStation::StationType station_type);
+	explicit ScriptStationList(ScriptStation::StationType station_type);
 };
 
 /**
@@ -281,7 +281,7 @@ public:
 	/**
 	 * @param vehicle_id The vehicle to get the list of stations he has in its orders from.
 	 */
-	ScriptStationList_Vehicle(VehicleID vehicle_id);
+	explicit ScriptStationList_Vehicle(VehicleID vehicle_id);
 };
 
 #endif /* SCRIPT_STATIONLIST_HPP */

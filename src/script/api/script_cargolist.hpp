@@ -34,7 +34,7 @@ public:
 	/**
 	 * @param industry_id The industry to get the list of cargoes it accepts from.
 	 */
-	ScriptCargoList_IndustryAccepting(IndustryID industry_id);
+	explicit ScriptCargoList_IndustryAccepting(IndustryID industry_id);
 };
 
 /**
@@ -47,7 +47,7 @@ public:
 	/**
 	 * @param industry_id The industry to get the list of cargoes it produces from.
 	 */
-	ScriptCargoList_IndustryProducing(IndustryID industry_id);
+	explicit ScriptCargoList_IndustryProducing(IndustryID industry_id);
 };
 
 /**
@@ -60,7 +60,7 @@ public:
 	/**
 	 * @param station_id The station to get the list of cargoes it accepts from.
 	 */
-	ScriptCargoList_StationAccepting(StationID station_id);
+	explicit ScriptCargoList_StationAccepting(StationID station_id);
 };
 
 #endif /* SCRIPT_CARGOLIST_HPP */

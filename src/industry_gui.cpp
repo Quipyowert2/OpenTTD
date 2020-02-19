@@ -2380,7 +2380,7 @@ struct IndustryCargoesWindow : public Window {
 	Dimension ind_textsize;   ///< Size to hold any industry type text, as well as STR_INDUSTRY_CARGOES_SELECT_INDUSTRY.
 	Scrollbar *vscroll;
 
-	IndustryCargoesWindow(int id) : Window(&_industry_cargoes_desc)
+	explicit IndustryCargoesWindow(int id) : Window(&_industry_cargoes_desc)
 	{
 		this->OnInit();
 		this->CreateNestedTree();

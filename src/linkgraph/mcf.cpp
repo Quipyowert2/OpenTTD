@@ -22,7 +22,7 @@ public:
 	 * @param n ID of node to be annotated.
 	 * @param source If the node is the source of its path.
 	 */
-	DistanceAnnotation(NodeID n, bool source = false) : Path(n, source) {}
+	explicit DistanceAnnotation(NodeID n, bool source = false) : Path(n, source) {}
 
 	bool IsBetter(const DistanceAnnotation *base, uint cap, int free_cap, uint dist) const;
 
@@ -61,7 +61,7 @@ public:
 	 * @param n ID of node to be annotated.
 	 * @param source If the node is the source of its path.
 	 */
-	CapacityAnnotation(NodeID n, bool source = false) : Path(n, source) {}
+	explicit CapacityAnnotation(NodeID n, bool source = false) : Path(n, source) {}
 
 	bool IsBetter(const CapacityAnnotation *base, uint cap, int free_cap, uint dist) const;
 
@@ -103,7 +103,7 @@ public:
 	 * Construct a GraphEdgeIterator.
 	 * @param job Job to iterate on.
 	 */
-	GraphEdgeIterator(LinkGraphJob &job) : job(job),
+	explicit GraphEdgeIterator(LinkGraphJob &job) : job(job),
 		i(nullptr, nullptr, INVALID_NODE), end(nullptr, nullptr, INVALID_NODE)
 	{}
 
@@ -149,7 +149,7 @@ public:
 	 * Constructor.
 	 * @param job Link graph job to work with.
 	 */
-	FlowEdgeIterator(LinkGraphJob &job) : job(job)
+	explicit FlowEdgeIterator(LinkGraphJob &job) : job(job)
 	{
 		for (NodeID i = 0; i < job.Size(); ++i) {
 			StationID st = job[i].Station();

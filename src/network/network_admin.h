@@ -40,7 +40,7 @@ public:
 	uint32 realtime_connect;                                 ///< Time of connection.
 	NetworkAddress address;                                  ///< Address of the admin.
 
-	ServerNetworkAdminSocketHandler(SOCKET s);
+	explicit ServerNetworkAdminSocketHandler(SOCKET s);
 	~ServerNetworkAdminSocketHandler();
 
 	NetworkRecvStatus SendError(NetworkErrorCode error);

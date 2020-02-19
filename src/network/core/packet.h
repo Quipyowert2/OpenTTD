@@ -56,8 +56,8 @@ private:
 	NetworkSocketHandler *cs;
 
 public:
-	Packet(NetworkSocketHandler *cs);
-	Packet(PacketType type);
+	explicit Packet(NetworkSocketHandler *cs);
+	explicit Packet(PacketType type);
 	~Packet();
 
 	/* Sending/writing of packets */

@@ -19,7 +19,7 @@ public:
 	 * Creates a "fatal error" exception.
 	 * @param msg The message describing the cause of the fatal error.
 	 */
-	Script_FatalError(const char *msg) :
+	explicit Script_FatalError(const char *msg) :
 		msg(msg)
 	{}
 

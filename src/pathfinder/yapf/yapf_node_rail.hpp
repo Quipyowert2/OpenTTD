@@ -17,7 +17,7 @@ struct CYapfRailSegmentKey
 
 	inline CYapfRailSegmentKey(const CYapfRailSegmentKey &src) : m_value(src.m_value) {}
 
-	inline CYapfRailSegmentKey(const CYapfNodeKeyTrackDir &node_key)
+	explicit inline CYapfRailSegmentKey(const CYapfNodeKeyTrackDir &node_key)
 	{
 		Set(node_key);
 	}
@@ -73,7 +73,7 @@ struct CYapfRailSegment
 	EndSegmentReasonBits   m_end_segment_reason;
 	CYapfRailSegment      *m_hash_next;
 
-	inline CYapfRailSegment(const CYapfRailSegmentKey &key)
+	explicit inline CYapfRailSegment(const CYapfRailSegmentKey &key)
 		: m_key(key)
 		, m_last_tile(INVALID_TILE)
 		, m_last_td(INVALID_TRACKDIR)

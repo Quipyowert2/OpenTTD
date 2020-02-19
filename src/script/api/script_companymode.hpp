@@ -40,7 +40,7 @@ public:
 	 * @note When the instance is destroyed, he restores the company that was
 	 *   current when the instance was created!
 	 */
-	ScriptCompanyMode(int company);
+	explicit ScriptCompanyMode(int company);
 
 	/**
 	 * Destroying this instance reset the company to that what it was

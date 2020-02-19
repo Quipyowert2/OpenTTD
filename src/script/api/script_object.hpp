@@ -43,7 +43,7 @@ protected:
 	class ActiveInstance {
 	friend class ScriptObject;
 	public:
-		ActiveInstance(ScriptInstance *instance);
+		explicit ActiveInstance(ScriptInstance *instance);
 		~ActiveInstance();
 	private:
 		ScriptInstance *last_active;    ///< The active instance before we go instantiated.

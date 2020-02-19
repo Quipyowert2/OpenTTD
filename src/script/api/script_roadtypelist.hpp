@@ -23,7 +23,7 @@ public:
 	/**
 	 * @param rtts Bitmask of road/tram types to list.
 	 */
-	ScriptRoadTypeList(ScriptRoad::RoadTramTypes rtts);
+	explicit ScriptRoadTypeList(ScriptRoad::RoadTramTypes rtts);
 };
 
 #endif /* SCRIPT_ROADTYPELIST_HPP */

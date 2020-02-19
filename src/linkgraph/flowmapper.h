@@ -27,7 +27,7 @@ public:
 	 * @param scale Whether the flow mapper should scale all flows to monthly
 	 *              values. Only do that on the very last flow mapping.
 	 */
-	FlowMapper(bool scale) : scale(scale) {}
+	explicit FlowMapper(bool scale) : scale(scale) {}
 	virtual void Run(LinkGraphJob &job) const;
 
 	/**

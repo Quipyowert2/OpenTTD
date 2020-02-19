@@ -40,7 +40,7 @@ public:
  */
 class RawText : public Text {
 public:
-	RawText(const char *text);
+	explicit RawText(const char *text);
 	~RawText();
 
 	const char *GetEncodedText() override { return this->text; }
@@ -79,7 +79,7 @@ public:
 	/**
 	 * The constructor wrapper from Squirrel.
 	 */
-	ScriptText(HSQUIRRELVM vm);
+	explicit ScriptText(HSQUIRRELVM vm);
 #else
 	/**
 	 * Generate a text from string. You can set parameters to the instance which

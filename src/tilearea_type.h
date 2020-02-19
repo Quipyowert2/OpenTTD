@@ -146,7 +146,7 @@ public:
 	 * Construct the iterator.
 	 * @param ta Area, i.e. begin point and width/height of to-be-iterated area.
 	 */
-	OrthogonalTileIterator(const OrthogonalTileArea &ta) : TileIterator(ta.w == 0 || ta.h == 0 ? INVALID_TILE : ta.tile), w(ta.w), x(ta.w), y(ta.h)
+	explicit OrthogonalTileIterator(const OrthogonalTileArea &ta) : TileIterator(ta.w == 0 || ta.h == 0 ? INVALID_TILE : ta.tile), w(ta.w), x(ta.w), y(ta.h)
 	{
 	}
 
@@ -200,7 +200,7 @@ public:
 	 * Construct the iterator.
 	 * @param ta Area, i.e. begin point and (diagonal) width/height of to-be-iterated area.
 	 */
-	DiagonalTileIterator(const DiagonalTileArea &ta) :
+	explicit DiagonalTileIterator(const DiagonalTileArea &ta) :
 		TileIterator(ta.tile), base_x(TileX(ta.tile)), base_y(TileY(ta.tile)), a_cur(0), b_cur(0), a_max(ta.a), b_max(ta.b)
 	{
 	}

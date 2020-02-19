@@ -82,7 +82,7 @@ public:
 	}
 
 	/** move constructor - take ownership of blob data */
-	inline ByteBlob(BlobHeader * const & src)
+	explicit inline ByteBlob(BlobHeader * const & src)
 	{
 		assert(src != nullptr);
 		header = src;

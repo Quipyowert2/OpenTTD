@@ -455,7 +455,7 @@ protected:
 	}
 
 public:
-	NetworkGameWindow(WindowDesc *desc) : Window(desc), name_editbox(NETWORK_CLIENT_NAME_LENGTH), filter_editbox(120)
+	explicit NetworkGameWindow(WindowDesc *desc) : Window(desc), name_editbox(NETWORK_CLIENT_NAME_LENGTH), filter_editbox(120)
 	{
 		this->list_pos = SLP_INVALID;
 		this->server = nullptr;
@@ -1055,7 +1055,7 @@ struct NetworkStartServerWindow : public Window {
 	byte widget_id;              ///< The widget that has the pop-up input menu
 	QueryString name_editbox;    ///< Server name editbox.
 
-	NetworkStartServerWindow(WindowDesc *desc) : Window(desc), name_editbox(NETWORK_NAME_LENGTH)
+	explicit NetworkStartServerWindow(WindowDesc *desc) : Window(desc), name_editbox(NETWORK_NAME_LENGTH)
 	{
 		this->InitNested(WN_NETWORK_WINDOW_START);
 
@@ -2022,7 +2022,7 @@ uint32 _network_join_bytes_total;       ///< The total number of bytes to downlo
 struct NetworkJoinStatusWindow : Window {
 	NetworkPasswordType password_type;
 
-	NetworkJoinStatusWindow(WindowDesc *desc) : Window(desc)
+	explicit NetworkJoinStatusWindow(WindowDesc *desc) : Window(desc)
 	{
 		this->parent = FindWindowById(WC_NETWORK_WINDOW, WN_NETWORK_WINDOW_GAME);
 		this->InitNested(WN_NETWORK_STATUS_WINDOW_JOIN);

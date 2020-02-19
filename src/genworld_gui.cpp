@@ -313,7 +313,7 @@ struct GenerateLandscapeWindow : public Window {
 	char name[64];
 	GenerateLandscapeWindowMode mode;
 
-	GenerateLandscapeWindow(WindowDesc *desc, WindowNumber number = 0) : Window(desc)
+	explicit GenerateLandscapeWindow(WindowDesc *desc, WindowNumber number = 0) : Window(desc)
 	{
 		this->InitNested(number);
 

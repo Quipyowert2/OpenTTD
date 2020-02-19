@@ -17,7 +17,7 @@ protected:
 	 * Constructor.
 	 * @param job Link graph job being executed.
 	 */
-	MultiCommodityFlow(LinkGraphJob &job) : job(job),
+	explicit MultiCommodityFlow(LinkGraphJob &job) : job(job),
 			max_saturation(job.Settings().short_path_saturation)
 	{}
 
@@ -54,7 +54,7 @@ private:
 	void EliminateCycle(PathVector &path, Path *cycle_begin, uint flow);
 	uint FindCycleFlow(const PathVector &path, const Path *cycle_begin);
 public:
-	MCF1stPass(LinkGraphJob &job);
+	explicit MCF1stPass(LinkGraphJob &job);
 };
 
 /**
@@ -66,7 +66,7 @@ public:
  */
 class MCF2ndPass : public MultiCommodityFlow {
 public:
-	MCF2ndPass(LinkGraphJob &job);
+	explicit MCF2ndPass(LinkGraphJob &job);
 };
 
 /**

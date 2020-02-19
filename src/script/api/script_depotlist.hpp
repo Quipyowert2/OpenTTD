@@ -23,7 +23,7 @@ public:
 	/**
 	 * @param transport_type The type of transport to make a list of depots for.
 	 */
-	ScriptDepotList(ScriptTile::TransportType transport_type);
+	explicit ScriptDepotList(ScriptTile::TransportType transport_type);
 };
 
 #endif /* SCRIPT_DEPOTLIST_HPP */

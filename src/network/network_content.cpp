@@ -716,7 +716,7 @@ public:
 	 * Initiate the connecting.
 	 * @param address The address of the server.
 	 */
-	NetworkContentConnecter(const NetworkAddress &address) : TCPConnecter(address) {}
+	explicit NetworkContentConnecter(const NetworkAddress &address) : TCPConnecter(address) {}
 
 	void OnFailure() override
 	{

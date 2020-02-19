@@ -365,7 +365,7 @@ inline bool NWidgetCore::IsDisabled() const
  */
 class NWidgetContainer : public NWidgetBase {
 public:
-	NWidgetContainer(WidgetType tp);
+	explicit NWidgetContainer(WidgetType tp);
 	~NWidgetContainer();
 
 	void Add(NWidgetBase *wid);
@@ -431,7 +431,7 @@ DECLARE_ENUM_AS_BIT_SET(NWidContainerFlags)
 /** Container with pre/inter/post child space. */
 class NWidgetPIPContainer : public NWidgetContainer {
 public:
-	NWidgetPIPContainer(WidgetType tp, NWidContainerFlags flags = NC_NONE);
+	explicit NWidgetPIPContainer(WidgetType tp, NWidContainerFlags flags = NC_NONE);
 
 	void SetPIP(uint8 pip_pre, uint8 pip_inter, uint8 pip_post);
 
@@ -572,7 +572,7 @@ private:
  */
 class NWidgetViewport : public NWidgetCore {
 public:
-	NWidgetViewport(int index);
+	explicit NWidgetViewport(int index);
 
 	void SetupSmallestSize(Window *w, bool init_array) override;
 	void Draw(const Window *w) override;
@@ -600,7 +600,7 @@ public:
 		SS_BIG,             ///< Step in #cap units.
 	};
 
-	Scrollbar(bool is_vertical) : is_vertical(is_vertical), stepsize(1)
+	explicit Scrollbar(bool is_vertical) : is_vertical(is_vertical), stepsize(1)
 	{
 	}
 

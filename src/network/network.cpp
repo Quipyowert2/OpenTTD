@@ -561,7 +561,7 @@ static void NetworkInitialize(bool close_admins = true)
 /** Non blocking connection create to query servers */
 class TCPQueryConnecter : TCPConnecter {
 public:
-	TCPQueryConnecter(const NetworkAddress &address) : TCPConnecter(address) {}
+	explicit TCPQueryConnecter(const NetworkAddress &address) : TCPConnecter(address) {}
 
 	void OnFailure() override
 	{
@@ -644,7 +644,7 @@ void NetworkRebuildHostList()
 /** Non blocking connection create to actually connect to servers */
 class TCPClientConnecter : TCPConnecter {
 public:
-	TCPClientConnecter(const NetworkAddress &address) : TCPConnecter(address) {}
+	explicit TCPClientConnecter(const NetworkAddress &address) : TCPConnecter(address) {}
 
 	void OnFailure() override
 	{

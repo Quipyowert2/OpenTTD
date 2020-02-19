@@ -94,7 +94,7 @@ public:
 	 * Create the socket.
 	 * @param addresses The addresses to bind on.
 	 */
-	MasterNetworkUDPSocketHandler(NetworkAddressList *addresses) : NetworkUDPSocketHandler(addresses) {}
+	explicit MasterNetworkUDPSocketHandler(NetworkAddressList *addresses) : NetworkUDPSocketHandler(addresses) {}
 	virtual ~MasterNetworkUDPSocketHandler() {}
 };
 
@@ -126,7 +126,7 @@ public:
 	 * Create the socket.
 	 * @param addresses The addresses to bind on.
 	 */
-	ServerNetworkUDPSocketHandler(NetworkAddressList *addresses) : NetworkUDPSocketHandler(addresses) {}
+	explicit ServerNetworkUDPSocketHandler(NetworkAddressList *addresses) : NetworkUDPSocketHandler(addresses) {}
 	virtual ~ServerNetworkUDPSocketHandler() {}
 };
 

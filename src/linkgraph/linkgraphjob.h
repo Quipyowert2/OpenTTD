@@ -267,7 +267,7 @@ public:
 	LinkGraphJob() : settings(_settings_game.linkgraph),
 			join_date(INVALID_DATE) {}
 
-	LinkGraphJob(const LinkGraph &orig);
+	explicit LinkGraphJob(const LinkGraph &orig);
 	~LinkGraphJob();
 
 	void Init();
@@ -341,7 +341,7 @@ class Path {
 public:
 	static Path *invalid_path;
 
-	Path(NodeID n, bool source = false);
+	explicit Path(NodeID n, bool source = false);
 
 	/** Get the node this leg passes. */
 	inline NodeID GetNode() const { return this->node; }

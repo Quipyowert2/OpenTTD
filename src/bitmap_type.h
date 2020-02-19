@@ -32,7 +32,7 @@ public:
 		this->h = 0;
 	}
 
-	BitmapTileArea(const TileArea &ta)
+	explicit BitmapTileArea(const TileArea &ta)
 	{
 		this->tile = ta.tile;
 		this->w = ta.w;
@@ -112,7 +112,7 @@ public:
 	 * Construct the iterator.
 	 * @param bitmap BitmapTileArea to iterate.
 	 */
-	BitmapTileIterator(const BitmapTileArea &bitmap) : OrthogonalTileIterator(bitmap), bitmap(&bitmap)
+	explicit BitmapTileIterator(const BitmapTileArea &bitmap) : OrthogonalTileIterator(bitmap), bitmap(&bitmap)
 	{
 		if (!this->bitmap->HasTile(TileIndex(this->tile))) ++(*this);
 	}

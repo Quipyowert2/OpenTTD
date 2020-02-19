@@ -1117,7 +1117,7 @@ struct MessageHistoryWindow : Window {
 
 	Scrollbar *vscroll;
 
-	MessageHistoryWindow(WindowDesc *desc) : Window(desc)
+	explicit MessageHistoryWindow(WindowDesc *desc) : Window(desc)
 	{
 		this->CreateNestedTree();
 		this->vscroll = this->GetScrollbar(WID_MH_SCROLLBAR);

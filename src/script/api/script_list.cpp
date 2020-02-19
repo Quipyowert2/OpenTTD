@@ -84,7 +84,7 @@ public:
 	 * Create a new sorter.
 	 * @param list The list to sort.
 	 */
-	ScriptListSorterValueAscending(ScriptList *list)
+	explicit ScriptListSorterValueAscending(ScriptList *list)
 	{
 		this->list = list;
 		this->End();
@@ -173,7 +173,7 @@ public:
 	 * Create a new sorter.
 	 * @param list The list to sort.
 	 */
-	ScriptListSorterValueDescending(ScriptList *list)
+	explicit ScriptListSorterValueDescending(ScriptList *list)
 	{
 		this->list = list;
 		this->End();
@@ -265,7 +265,7 @@ public:
 	 * Create a new sorter.
 	 * @param list The list to sort.
 	 */
-	ScriptListSorterItemAscending(ScriptList *list)
+	explicit ScriptListSorterItemAscending(ScriptList *list)
 	{
 		this->list = list;
 		this->End();
@@ -338,7 +338,7 @@ public:
 	 * Create a new sorter.
 	 * @param list The list to sort.
 	 */
-	ScriptListSorterItemDescending(ScriptList *list)
+	explicit ScriptListSorterItemDescending(ScriptList *list)
 	{
 		this->list = list;
 		this->End();

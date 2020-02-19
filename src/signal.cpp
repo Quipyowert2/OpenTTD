@@ -63,7 +63,7 @@ private:
 
 public:
 	/** Constructor - just set default values and 'name' */
-	SmallSet(const char *name) : n(0), overflowed(false), name(name) { }
+	explicit SmallSet(const char *name) : n(0), overflowed(false), name(name) { }
 
 	/** Reset variables to default values */
 	void Reset()

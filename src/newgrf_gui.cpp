@@ -2039,7 +2039,7 @@ struct SavePresetWindow : public Window {
 	 * Constructor of the save preset window.
 	 * @param initial_text Initial text to display in the edit box, or \c nullptr.
 	 */
-	SavePresetWindow(const char *initial_text) : Window(&_save_preset_desc), presetname_editbox(32)
+	explicit SavePresetWindow(const char *initial_text) : Window(&_save_preset_desc), presetname_editbox(32)
 	{
 		this->presets = GetGRFPresetList();
 		this->selected = -1;

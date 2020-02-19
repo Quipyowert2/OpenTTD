@@ -11,7 +11,7 @@
  */
 class DemandCalculator {
 public:
-	DemandCalculator(LinkGraphJob &job);
+	explicit DemandCalculator(LinkGraphJob &job);
 
 private:
 	int32 max_distance; ///< Maximum distance possible on the map.

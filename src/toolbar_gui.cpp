@@ -2034,7 +2034,7 @@ enum MainToolbarHotkeys {
 struct MainToolbarWindow : Window {
 	GUITimer timer;
 
-	MainToolbarWindow(WindowDesc *desc) : Window(desc)
+	explicit MainToolbarWindow(WindowDesc *desc) : Window(desc)
 	{
 		this->InitNested(0);
 
@@ -2394,7 +2394,7 @@ enum MainToolbarEditorHotkeys {
 struct ScenarioEditorToolbarWindow : Window {
 	GUITimer timer;
 
-	ScenarioEditorToolbarWindow(WindowDesc *desc) : Window(desc)
+	explicit ScenarioEditorToolbarWindow(WindowDesc *desc) : Window(desc)
 	{
 		this->InitNested(0);
 

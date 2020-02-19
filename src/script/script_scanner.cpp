@@ -190,7 +190,7 @@ struct ScriptFileChecksumCreator : FileScanner {
 	 * Initialise the md5sum to be all zeroes,
 	 * so we can easily xor the data.
 	 */
-	ScriptFileChecksumCreator(Subdirectory dir)
+	explicit ScriptFileChecksumCreator(Subdirectory dir)
 	{
 		this->dir = dir;
 		memset(this->md5sum, 0, sizeof(this->md5sum));

@@ -93,7 +93,7 @@ class PerformanceMeasurer {
 	PerformanceElement elem;
 	TimingMeasurement start_time;
 public:
-	PerformanceMeasurer(PerformanceElement elem);
+	explicit PerformanceMeasurer(PerformanceElement elem);
 	~PerformanceMeasurer();
 	void SetExpectedRate(double rate);
 	static void SetInactive(PerformanceElement elem);
@@ -115,7 +115,7 @@ class PerformanceAccumulator {
 	PerformanceElement elem;
 	TimingMeasurement start_time;
 public:
-	PerformanceAccumulator(PerformanceElement elem);
+	explicit PerformanceAccumulator(PerformanceElement elem);
 	~PerformanceAccumulator();
 	static void Reset(PerformanceElement elem);
 };

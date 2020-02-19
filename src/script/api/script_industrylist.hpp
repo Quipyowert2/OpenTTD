@@ -32,7 +32,7 @@ public:
 	/**
 	 * @param cargo_id The cargo this industry should accept.
 	 */
-	ScriptIndustryList_CargoAccepting(CargoID cargo_id);
+	explicit ScriptIndustryList_CargoAccepting(CargoID cargo_id);
 };
 
 /**
@@ -46,7 +46,7 @@ public:
 	/**
 	 * @param cargo_id The cargo this industry should produce.
 	 */
-	ScriptIndustryList_CargoProducing(CargoID cargo_id);
+	explicit ScriptIndustryList_CargoProducing(CargoID cargo_id);
 };
 
 #endif /* SCRIPT_INDUSTRYLIST_HPP */

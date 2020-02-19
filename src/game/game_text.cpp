@@ -161,7 +161,7 @@ struct TranslationWriter : LanguageWriter {
 	 * Writer for the encoded data.
 	 * @param strings The string table to add the strings to.
 	 */
-	TranslationWriter(StringList &strings) : strings(strings)
+	explicit TranslationWriter(StringList &strings) : strings(strings)
 	{
 	}
 
@@ -194,7 +194,7 @@ struct StringNameWriter : HeaderWriter {
 	 * Writer for the string names.
 	 * @param strings The string table to add the strings to.
 	 */
-	StringNameWriter(StringList &strings) : strings(strings)
+	explicit StringNameWriter(StringList &strings) : strings(strings)
 	{
 	}
 

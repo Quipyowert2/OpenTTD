@@ -93,7 +93,7 @@ struct ReadBuffer {
 	 * Initialise our variables.
 	 * @param reader The filter to actually read data.
 	 */
-	ReadBuffer(LoadFilter *reader) : bufp(nullptr), bufe(nullptr), reader(reader), read(0)
+	explicit ReadBuffer(LoadFilter *reader) : bufp(nullptr), bufe(nullptr), reader(reader), read(0)
 	{
 	}
 
@@ -1833,7 +1833,7 @@ struct FileReader : LoadFilter {
 	 * Create the file reader, so it reads from a specific file.
 	 * @param file The file to read from.
 	 */
-	FileReader(FILE *file) : LoadFilter(nullptr), file(file), begin(ftell(file))
+	explicit FileReader(FILE *file) : LoadFilter(nullptr), file(file), begin(ftell(file))
 	{
 	}
 
@@ -1872,7 +1872,7 @@ struct FileWriter : SaveFilter {
 	 * Create the file writer, so it writes to a specific file.
 	 * @param file The file to write to.
 	 */
-	FileWriter(FILE *file) : SaveFilter(nullptr), file(file)
+	explicit FileWriter(FILE *file) : SaveFilter(nullptr), file(file)
 	{
 	}
 
@@ -2004,7 +2004,7 @@ struct NoCompLoadFilter : LoadFilter {
 	 * Initialise this filter.
 	 * @param chain The next filter in this chain.
 	 */
-	NoCompLoadFilter(LoadFilter *chain) : LoadFilter(chain)
+	explicit NoCompLoadFilter(LoadFilter *chain) : LoadFilter(chain)
 	{
 	}
 

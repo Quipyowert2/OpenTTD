@@ -175,7 +175,7 @@ public:
 	 * @param filename the file to open
 	 * @post the file is open; otherwise the application is killed.
 	 */
-	File(const char *filename)
+	explicit File(const char *filename)
 	{
 		this->fp = fopen(filename, "r");
 		if (this->fp == nullptr) {
@@ -262,7 +262,7 @@ public:
 	 * Create the lexer and fill the keywords table.
 	 * @param file the file to read from.
 	 */
-	Lexer(const File *file) : file(file), current_char('\0'), string(nullptr), token(TOKEN_UNKNOWN)
+	explicit Lexer(const File *file) : file(file), current_char('\0'), string(nullptr), token(TOKEN_UNKNOWN)
 	{
 		this->keywords["define"]  = TOKEN_DEFINE;
 		this->keywords["defined"] = TOKEN_DEFINED;

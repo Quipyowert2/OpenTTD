@@ -34,7 +34,7 @@ public:
 	/**
 	 * @param company_id The company to list clients for.
 	 */
-	ScriptClientList_Company(ScriptCompany::CompanyID company);
+	explicit ScriptClientList_Company(ScriptCompany::CompanyID company);
 };
 
 #endif /* SCRIPT_CIENTLIST_HPP */

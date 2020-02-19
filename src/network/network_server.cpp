@@ -65,7 +65,7 @@ struct PacketWriter : SaveFilter {
 	 * Create the packet writer.
 	 * @param cs The socket handler we're making the packets for.
 	 */
-	PacketWriter(ServerNetworkGameSocketHandler *cs) : SaveFilter(nullptr), cs(cs), current(nullptr), total_size(0), packets(nullptr)
+	explicit PacketWriter(ServerNetworkGameSocketHandler *cs) : SaveFilter(nullptr), cs(cs), current(nullptr), total_size(0), packets(nullptr)
 	{
 	}
 

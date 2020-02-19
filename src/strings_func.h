@@ -77,7 +77,7 @@ public:
 
 	/** Create a new StringParameters instance. */
 	template <size_t Tnum_param>
-	StringParameters(int64 (&data)[Tnum_param]) :
+	explicit StringParameters(int64 (&data)[Tnum_param]) :
 		parent(nullptr),
 		data((uint64 *)data),
 		type(nullptr),

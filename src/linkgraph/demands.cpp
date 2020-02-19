@@ -26,7 +26,7 @@ public:
 	 * @param mod_size Size modifier to be used. Determines how much demands
 	 *                 increase with the supply of the remote station.
 	 */
-	inline SymmetricScaler(uint mod_size) : mod_size(mod_size), supply_sum(0),
+	explicit inline SymmetricScaler(uint mod_size) : mod_size(mod_size), supply_sum(0),
 		demand_per_node(0)
 	{}
 

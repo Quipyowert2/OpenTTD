@@ -23,7 +23,7 @@
 static ScreenshotType _screenshot_type;
 
 struct ScreenshotWindow : Window {
-	ScreenshotWindow(WindowDesc *desc) : Window(desc) {
+	explicit ScreenshotWindow(WindowDesc *desc) : Window(desc) {
 		this->CreateNestedTree();
 		this->FinishInitNested();
 	}

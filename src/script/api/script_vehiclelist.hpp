@@ -34,7 +34,7 @@ public:
 	 * @param station_id The station to get the list of vehicles from, which have orders to it.
 	 * @pre ScriptBaseStation::IsValidBaseStation(station_id)
 	 */
-	ScriptVehicleList_Station(StationID station_id);
+	explicit ScriptVehicleList_Station(StationID station_id);
 };
 
 /**
@@ -51,7 +51,7 @@ public:
 	/**
 	 * @param tile The tile of the depot to get the list of vehicles from, which have orders to it.
 	 */
-	ScriptVehicleList_Depot(TileIndex tile);
+	explicit ScriptVehicleList_Depot(TileIndex tile);
 };
 
 /**
@@ -64,7 +64,7 @@ public:
 	/**
 	 * @param vehicle_id The vehicle that the rest shared orders with.
 	 */
-	ScriptVehicleList_SharedOrders(VehicleID vehicle_id);
+	explicit ScriptVehicleList_SharedOrders(VehicleID vehicle_id);
 };
 
 /**
@@ -77,7 +77,7 @@ public:
 	/**
 	 * @param group_id The ID of the group the vehicles are in.
 	 */
-	ScriptVehicleList_Group(GroupID group_id);
+	explicit ScriptVehicleList_Group(GroupID group_id);
 };
 
 /**
@@ -90,7 +90,7 @@ public:
 	/**
 	 * @param vehicle_type The VehicleType to get the list of vehicles for.
 	 */
-	ScriptVehicleList_DefaultGroup(ScriptVehicle::VehicleType vehicle_type);
+	explicit ScriptVehicleList_DefaultGroup(ScriptVehicle::VehicleType vehicle_type);
 };
 
 #endif /* SCRIPT_VEHICLELIST_HPP */

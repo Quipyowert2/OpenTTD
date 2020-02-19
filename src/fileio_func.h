@@ -152,7 +152,7 @@ class FileCloser {
 	FILE *f;
 
 public:
-	FileCloser(FILE *_f) : f(_f) {}
+	explicit FileCloser(FILE *_f) : f(_f) {}
 	~FileCloser()
 	{
 		fclose(f);

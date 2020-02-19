@@ -23,7 +23,7 @@ public:
 	/**
 	 * @param vehicle_type The type of vehicle to make a list of engines for.
 	 */
-	ScriptEngineList(ScriptVehicle::VehicleType vehicle_type);
+	explicit ScriptEngineList(ScriptVehicle::VehicleType vehicle_type);
 };
 
 #endif /* SCRIPT_ENGINELIST_HPP */

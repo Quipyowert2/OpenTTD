@@ -59,7 +59,7 @@ public:
 	/**
 	 * Constructor of ScriptEvent, to get the type of event.
 	 */
-	ScriptEvent(ScriptEvent::ScriptEventType type) :
+	explicit ScriptEvent(ScriptEvent::ScriptEventType type) :
 		type(type)
 	{}
 

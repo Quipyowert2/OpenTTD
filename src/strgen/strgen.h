@@ -45,7 +45,7 @@ struct StringData {
 	size_t max_strings;   ///< The maximum number of strings.
 	size_t next_string_id;///< The next string ID to allocate.
 
-	StringData(size_t tabs);
+	explicit StringData(size_t tabs);
 	~StringData();
 	void FreeTranslation();
 	uint HashStr(const char *s) const;

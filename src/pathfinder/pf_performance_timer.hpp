@@ -49,7 +49,7 @@ struct CPerfStartReal
 {
 	CPerformanceTimer *m_pperf;
 
-	inline CPerfStartReal(CPerformanceTimer& perf) : m_pperf(&perf)
+	explicit inline CPerfStartReal(CPerformanceTimer& perf) : m_pperf(&perf)
 	{
 		if (m_pperf != nullptr) m_pperf->Start();
 	}
@@ -70,7 +70,7 @@ struct CPerfStartReal
 
 struct CPerfStartFake
 {
-	inline CPerfStartFake(CPerformanceTimer& perf) {}
+	explicit inline CPerfStartFake(CPerformanceTimer& perf) {}
 	inline ~CPerfStartFake() {}
 	inline void Stop() {}
 };

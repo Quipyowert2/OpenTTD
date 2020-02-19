@@ -72,7 +72,7 @@ private:
 
 	void ClearGlyphToSpriteMap();
 public:
-	SpriteFontCache(FontSize fs);
+	explicit SpriteFontCache(FontSize fs);
 	~SpriteFontCache();
 	virtual SpriteID GetUnicodeGlyph(WChar key);
 	virtual void SetUnicodeGlyph(WChar key, SpriteID sprite);

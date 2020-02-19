@@ -51,7 +51,7 @@ public:
 	Order() : flags(0), refit_cargo(CT_NO_REFIT), max_speed(UINT16_MAX) {}
 	~Order();
 
-	Order(uint32 packed);
+	explicit Order(uint32 packed);
 
 	/**
 	 * Check whether this order is of the given type.

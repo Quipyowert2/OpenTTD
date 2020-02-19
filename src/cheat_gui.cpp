@@ -213,7 +213,7 @@ struct CheatWindow : Window {
 	uint line_height;
 	int box_width;
 
-	CheatWindow(WindowDesc *desc) : Window(desc)
+	explicit CheatWindow(WindowDesc *desc) : Window(desc)
 	{
 		this->box_width = GetSpriteSize(SPR_BOX_EMPTY).width;
 		this->InitNested();

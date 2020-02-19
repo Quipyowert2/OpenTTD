@@ -30,7 +30,7 @@ struct EndGameHighScoreBaseWindow : Window {
 	uint32 background_img;
 	int8 rank;
 
-	EndGameHighScoreBaseWindow(WindowDesc *desc) : Window(desc)
+	explicit EndGameHighScoreBaseWindow(WindowDesc *desc) : Window(desc)
 	{
 		this->InitNested();
 		CLRBITS(this->flags, WF_WHITE_BORDER);
@@ -93,7 +93,7 @@ struct EndGameHighScoreBaseWindow : Window {
 
 /** End game window shown at the end of the game */
 struct EndGameWindow : EndGameHighScoreBaseWindow {
-	EndGameWindow(WindowDesc *desc) : EndGameHighScoreBaseWindow(desc)
+	explicit EndGameWindow(WindowDesc *desc) : EndGameHighScoreBaseWindow(desc)
 	{
 		/* Pause in single-player to have a look at the highscore at your own leisure */
 		if (!_networking) DoCommandP(0, PM_PAUSED_NORMAL, 1, CMD_PAUSE);

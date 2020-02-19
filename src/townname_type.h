@@ -32,7 +32,7 @@ struct TownNameParams {
 	 * Initializes this struct from language ID
 	 * @param town_name town name 'language' ID
 	 */
-	TownNameParams(byte town_name)
+	explicit TownNameParams(byte town_name)
 	{
 		extern int _nb_orig_names;
 		bool grf = town_name >= _nb_orig_names;
@@ -40,7 +40,7 @@ struct TownNameParams {
 		this->type = grf ? GetGRFTownNameType(town_name - _nb_orig_names) : SPECSTR_TOWNNAME_START + town_name;
 	}
 
-	TownNameParams(const Town *t);
+	explicit TownNameParams(const Town *t);
 };
 
 #endif /* TOWNNAME_TYPE_H */

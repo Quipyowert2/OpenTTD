@@ -24,7 +24,7 @@
  * Callback profiler for NewGRF development
  */
 struct NewGRFProfiler {
-	NewGRFProfiler(const GRFFile *grffile);
+	explicit NewGRFProfiler(const GRFFile *grffile);
 	~NewGRFProfiler();
 
 	void BeginResolve(const ResolverObject &resolver);

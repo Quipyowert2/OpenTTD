@@ -53,7 +53,7 @@ private:
 struct GenericResolverObject : public ResolverObject {
 	GenericScopeResolver generic_scope;
 
-	GenericResolverObject(bool ai_callback, CallbackID callback = CBID_NO_CALLBACK);
+	explicit GenericResolverObject(bool ai_callback, CallbackID callback = CBID_NO_CALLBACK);
 
 	ScopeResolver *GetScope(VarSpriteGroupScope scope = VSG_SCOPE_SELF, byte relative = 0) override
 	{

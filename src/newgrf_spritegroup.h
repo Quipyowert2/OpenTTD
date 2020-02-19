@@ -56,7 +56,7 @@ extern SpriteGroupPool _spritegroup_pool;
 /* Common wrapper for all the different sprite group types */
 struct SpriteGroup : SpriteGroupPool::PoolItem<&_spritegroup_pool> {
 protected:
-	SpriteGroup(SpriteGroupType type) : nfo_line(0), type(type) {}
+	explicit SpriteGroup(SpriteGroupType type) : nfo_line(0), type(type) {}
 	/** Base sprite group resolver */
 	virtual const SpriteGroup *Resolve(ResolverObject &object) const { return this; };
 
@@ -296,7 +296,7 @@ struct IndustryProductionSpriteGroup : SpriteGroup {
 struct ScopeResolver {
 	ResolverObject &ro; ///< Surrounding resolver object.
 
-	ScopeResolver(ResolverObject &ro) : ro(ro) {}
+	explicit ScopeResolver(ResolverObject &ro) : ro(ro) {}
 	virtual ~ScopeResolver() {}
 
 	virtual uint32 GetRandomBits() const;
@@ -320,7 +320,7 @@ struct ResolverObject {
 	 * @param callback_param1 First parameter (var 10) of the callback (only used when \a callback is also set).
 	 * @param callback_param2 Second parameter (var 18) of the callback (only used when \a callback is also set).
 	 */
-	ResolverObject(const GRFFile *grffile, CallbackID callback = CBID_NO_CALLBACK, uint32 callback_param1 = 0, uint32 callback_param2 = 0)
+	explicit ResolverObject(const GRFFile *grffile, CallbackID callback = CBID_NO_CALLBACK, uint32 callback_param1 = 0, uint32 callback_param2 = 0)
 		: default_scope(*this), callback(callback), callback_param1(callback_param1), callback_param2(callback_param2), grffile(grffile), root_spritegroup(nullptr)
 	{
 		this->ResetState();
